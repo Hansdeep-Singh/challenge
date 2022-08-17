@@ -1,0 +1,12 @@
+<section id="addcomment">
+    <div class="card">
+        <div class="userimage"><img src="./assets/images/avatars/yoda.png"></div>
+        <div>
+            <span>Add a comment</span>
+            <textarea [(ngModel)]="userComment" rows="6"></textarea>
+        </div>
+        <div class="button">
+            <button (click)="addComment()">SEND</button>
+        </div>
+    </div>
+</section>

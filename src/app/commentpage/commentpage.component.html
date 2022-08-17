@@ -1,0 +1,19 @@
+<!-- Comments -->
+<section id="page">
+    <div class="container-outer">
+        <div class="container">
+            <div *ngFor="let comment of comments">
+                <div class="comment">
+                    <app-commentbox [comment]="comment"></app-commentbox>
+                </div>
+
+                <div class="replies">
+                    <div *ngFor="let comment of comment?.replies">
+                        <app-commentbox [comment]="comment"></app-commentbox>
+                    </div>
+                </div>
+            </div>
+            <app-addcomment [currentUser]="currentUser"></app-addcomment>
+        </div>
+    </div>
+</section>

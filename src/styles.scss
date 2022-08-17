@@ -1,0 +1,461 @@
+// * {
+//     box-sizing: border-box;
+//     outline: 1px solid rgb(140, 118, 226) !important;
+// }
+
+body {
+    background-color: #E8EAF6;
+    font-family: Helvetica, Arial, Sans-Serif !important;
+
+    button {
+        background-color: #3E51B5;
+        color: #fff;
+        text-decoration: none;
+        border: 0;
+        padding: 10px;
+        border-radius: 3px;
+    }
+
+    img {
+        width: 42px;
+        height: 42px;
+    }
+
+    textarea {
+        border: 1px solid #bfbfbf;
+        border-radius: 7px;
+        width: 85%;
+        padding: 10px;
+        font-family: inherit;
+        font-size: inherit;
+    }
+
+    textarea:focus {
+        border: 2px solid #3E51B5;
+        outline: none !important;
+    }
+
+    .blue {
+        color: blue;
+    }
+
+    .red {
+        color: red;
+    }
+
+    .container-outer {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        width: 65%;
+    }
+
+    .card {
+        background-color: #FFFFFF;
+        width: 100%;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: row;
+        padding: 10px;
+
+    }
+
+    @media only screen and (max-width: 768px) {
+        .card {
+            flex-direction: column-reverse;
+            width: 95%;
+        }
+    }
+
+    .counter {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        color: #4A5381;
+
+        div:nth-child(1) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            * {
+                margin: 10px;
+            }
+
+            i {
+                display: flex;
+
+                justify-content: center;
+            }
+        }
+
+        @media only screen and (max-width: 768px) {
+            div:nth-child(1) {
+                flex-direction: row;
+            }
+        }
+
+
+
+        div:nth-child(2) {
+            width: 120px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+
+        }
+
+        @media only screen and (min-width: 768px) {
+            div:nth-child(2) {
+                display: none;
+            }
+        }
+
+
+        i {
+            cursor: pointer;
+        }
+
+
+    }
+
+    @media only screen and (max-width: 768px) {
+
+        .counter {
+            flex-direction: row;
+        }
+    }
+
+
+
+    .commentbody {
+        width: 100%;
+        margin-left: 10px;
+
+
+        p {
+            margin-top: 17px;
+        }
+
+        .header {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+
+            .span {
+                font-size: small;
+                color: #abaaaa;
+                font-weight: bold;
+            }
+
+            div:nth-child(1) {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+            }
+
+
+            div:nth-child(2) {
+                color: #4A5381;
+                margin-right: 24px;
+                display: flex;
+                flex-direction: row;
+                justify-content: end;
+
+                .test {
+                    display: flex;
+                    justify-content: center;
+
+
+                }
+
+            }
+
+
+            @media only screen and (max-width: 768px) {
+                div:nth-child(2) {
+                    display: none;
+                }
+            }
+
+            * {
+                margin-right: 10px;
+            }
+        }
+    }
+
+    #page {
+        .replies {
+            margin-left: 15px;
+            padding-left: 15px;
+            border-left: 1px solid rgb(204, 204, 204);
+        }
+
+        .replies .card {
+            margin-top: 20px;
+        }
+
+        .comment {
+            margin: 10px 0 0 0px;
+        }
+    }
+
+    #addcomment {
+        span {
+            font-size: small;
+            position: absolute;
+            background-color: #fff;
+            top: -10px;
+            left: 9px;
+            padding: 5px;
+        }
+
+
+        .card {
+            margin-top: 20px;
+
+            div:nth-child(1) {
+                flex: 1;
+            }
+
+            div:nth-child(2) {
+                position: relative;
+                flex: 10;
+
+            }
+
+            div:nth-child(3) {
+                flex: 1;
+                display: flex;
+                justify-content: end;
+                align-items: flex-start;
+            }
+
+
+        }
+    }
+
+    #commentbox {
+        .yoda {
+            font-size: small;
+            position: absolute;
+            background-color: #fff;
+            top: -10px;
+            left: 9px;
+            padding: 5px;
+        }
+
+        .cursor {
+            cursor: pointer;
+        }
+
+        .button {
+            display: flex;
+            justify-content: end;
+        }
+
+        .inputbox {
+            position: relative;
+        }
+
+        textarea {
+            width: 85%;
+            font-family: inherit;
+            font-size: inherit;
+        }
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}

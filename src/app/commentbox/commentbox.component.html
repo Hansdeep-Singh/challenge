@@ -1,0 +1,58 @@
+<section id="commentbox">
+    <div class="card">
+        <div class="counter">
+            <div>
+                <i (click)="plus(comment?.id)" class="fa-solid fa-plus"></i>
+                <span>{{coun}}</span>
+                <i (click)="minus()" class="fa-solid fa-minus"></i>
+            </div>
+            <div>
+                <span *ngIf="isCurrentUser; else all">
+                    <i class="fa-solid fa-trash"></i>
+                    <span (click)="del(comment?.id)">Delete</span>
+                    <i class="fa-solid fa-pen"></i>
+                    <span (click)="edit()"> Edit</span>
+                </span>
+                <ng-template #all>
+                    <i class="fa-solid fa-reply"></i>
+                    <span>Reply</span>
+                </ng-template>
+            </div>
+        </div>
+        <div class="commentbody">
+            <div class="header">
+                <div class="infodur">
+                    <img [src]="comment?.user?.image?.png">
+                    <h5>{{comment?.user?.username}}</h5>
+                    <span class="span">{{duration}}</span>
+                </div>
+                <div>
+                    <span class="cursor" *ngIf="isCurrentUser; else all">
+                        <i (click)="del(comment?.id)" class="fa-solid red  fa-trash"></i>
+                        <span (click)="del(comment?.id)">Delete</span>
+                        <i class="fa-solid fa-pen"></i>
+                        <span (click)="edit()"> Edit</span>
+
+                    </span>
+                    <ng-template #all>
+                        <i class="fa-solid fa-reply"></i>
+                        <span>Reply</span>
+                    </ng-template>
+                </div>
+            </div>
+            <div>
+                <div *ngIf="isCurrentUser; else otha" class="inputbox">
+                    <span class="yoda">Add a comment</span>
+                    <div> <textarea [disabled]="disable" [(ngModel)]="userComment" rows="6"></textarea></div>
+                    <div class="button">
+                        <button (click)="updateComment()">UPDATE</button>
+                    </div>
+                </div>
+            </div>
+            <ng-template #otha>
+                <span class="blue" *ngIf="comment?.replyingTo"> @{{comment?.replyingTo}}</span> {{comment?.content}}
+            </ng-template>
+        </div>
+    </div>
+
+</section>
